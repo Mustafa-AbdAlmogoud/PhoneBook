@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<script src="PhoneBook.js"></script>
+		
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="eventsHandling.js"></script>
+		
+	</head>
+	
+	<body class="container">
+			<div class="buttons">
+				<button id="addButton" type="button" class="btn btn-info btn-lg"
+				data-toggle="modal" data-target="#myModal">ADD CONTACT</button>
+				<button id="listButton" type="button" class="btn btn-info btn-lg">LIST CONTACTS</button>
+				<div class="searchSection" >
+					<input id="searchInput" type="text" placeholder="phone or name" hidden="true"></input>
+					<i id="searchIcon" class="fa fa-search"></i>
+				</div>
+			</div>
+			<div id="myModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">New Contact</h4>
+						</div>
+						<div class="modal-body">
+							<form id="contactForm" role="form">
+								<div class="form-group">
+									<label for="name"><span class="glyphicon glyphicon-eye-open"></span> Name</label>
+									<input type="text" class="form-control" id="name" placeholder="first name" pattern="[a-z]{1,100}">
+								</div>
+								<div class="form-group">
+									<label for="number"><span class="glyphicon glyphicon-eye-open"></span> Phone Number</label>
+									<input type="text" class="form-control" id="phone" placeholder="xx-xxx-xxxx">
+								</div>
+								<div class="form-group">
+									<label for="email"><span class="glyphicon glyphicon-eye-open"></span> E-Mail</label>
+									<input type="text" class="form-control" id="email" placeholder="example@example.example">
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button id="save" type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+							<button id="cancle" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="showContacts"></div>
+	</body>
+</html>
